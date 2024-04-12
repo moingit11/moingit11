@@ -31,6 +31,16 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-slide container">
+                <!-- Add content for the second slide -->
+            </div>
+            <div class="swiper-slide container">
+                <!-- Add content for the third slide -->
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" id="prevBtn"></div>
+        <div class="swiper-button-next" id="nextBtn"></div>
 
       
      </section>
@@ -218,6 +228,20 @@ Harry Potter is a film series based on the eponymous novels by British author J.
         document.getElementById('menu-icon').addEventListener('click', function() {
             var navbar = document.getElementById('navbar');
             navbar.classList.toggle('show');
+        });
+    </script>
+   <script>
+        var swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '#nextBtn',
+                prevEl: '#prevBtn',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView: 1, // Number of slides per view
+            spaceBetween: 30, // Space between slides
+            loop: true, // Enable continuous loop mode
         });
     </script>
    
