@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
      <style>
         
-           .play {
-           position: absolute;
-            bottom: 20px;
+          .swiper-slide {
+            position: relative;
+        }
+
+        .play {
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
             left: 50%;
             transform: translateX(-50%);
             width: 60px;
@@ -23,7 +27,10 @@
             color: white;
             font-size: 24px;
             text-decoration: none;
-        
+        }
+
+        .play i {
+            transform: translateX(-1px); /* Adjust icon position */
         }
     </style>
 </head>
