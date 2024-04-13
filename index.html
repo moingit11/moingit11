@@ -516,16 +516,13 @@
      </div>
      </section>
   
-  <!-- Add the hyperlink to navigate to another slide -->
-<a href="#next-slide" class="next-slide-link">LOAD MORE</a>
-
-<!-- Add another slide with the same format -->
-<section class="movies" id="next-slide">
-    <!-- Your content for the next slide goes here, same format as the movies section number 2 slide-->
-  <!--Movies-->
-     <section class="movies" id="movies">
-        <h2 class="heading">GREAT CLASSIC HITS</h2>
-        <div class="movies-container">
+Container for the slider -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+                <div class="movies-container">
 
  
 
@@ -653,18 +650,31 @@
         </div>
           
      </div>
-     </section>
-  </section>
-  
-  <!-- Add the hyperlink to navigate to another slide -->
-<a href="#next-slide" class="next-slide-link">LOAD MORE</a>
+            <h2>Slide 1</h2>
+        </div>
+        <div class="swiper-slide">
+            <!-- Content for second slide -->
+            <!-- Add your content here -->
+            <h2>Slide 2</h2>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
-<!-- Add another slide with the same format -->
-<section class="movies" id="next-slide">
-    <!-- Your content for the next slide goes here, same format as the movies section -->
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<!-- Add a hyperlink to navigate to the next section -->
+<a href="#next-section">Next Section</a>
+
+<!-- Your next section content goes here -->
+<section id="next-section">
+    <!-- Add your content for the next section here -->
+    <h2>Next Section</h2>
 </section>
-
-
 
 
 
@@ -729,6 +739,24 @@
         // Center the popup window on the screen
         if (window.focus) { popupWindow.focus(); }
         return false;
+    });
+</script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 </script>
    
