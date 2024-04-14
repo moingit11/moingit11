@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Set background color to black */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the container take up the full viewport height */
+        }
+
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            position: relative;
+            width: 150px;
+            height: 225px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Search box styles */
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .search-box {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+</style>
+  <style>
+        /* Your existing CSS styles here */
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #555;
+        }
+    </style>
+   </head>
+<body style="background-color: black;">
+
+<section class="movies" id="movies">
+  <h2 class="heading" style="text-align: center; text-decoration: underline; font-style: italic; color: red;">ALL HITS EVER</h2>
+<!-- Search box -->
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search movies..." onkeyup="filterMovies(this.value)">
+    </div>
+
+ <!-- Movie posters will be added here rambo series -->
+
+ <div class="movies-container">
+        <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rambo-full-18835/934497')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/1e/00/1e00e539b5ab7726e3759b997a6a2dc8/1e00e539b5ab7726e3759b997a6a2dc8.jpg" alt="">
+        </div>
+
+        
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-first-blood-full-19383/1064219')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/92/bf/92bf30e2b1ed238c8b89582ab119384f/92bf30e2b1ed238c8b89582ab119384f.jpg" alt="">
+              </div>
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rambo-first-blood-part-ii-full-19221/934272')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/07/c0/07c0fd4a9bd8c40e9c4ba17a79fbeb8f/07c0fd4a9bd8c40e9c4ba17a79fbeb8f.jpg" alt="">
+            
+        </div>
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rambo-iii-full-18836/934496')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/4c/50/4c508c36c2c2b3c259ecfabdcd77433e/4c508c36c2c2b3c259ecfabdcd77433e.jpg" alt="">
+            
+        </div>
+
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rambo-last-blood-full-41569/1121375')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/07/5c/075c431037f7a005bae74665d58600d0/075c431037f7a005bae74665d58600d0.jpg" alt="">
+        </div>
+
+
+<!-- Movie posters will be added here rocky balboa series-->
+
+
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-full-19528/934084')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/8b/a6/8ba6ba22df61800b1c69f9932653e815/8ba6ba22df61800b1c69f9932653e815.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-ii-full-18883/934475')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/16/3f/163f904fa32cdfde4c0fce8670541a59/163f904fa32cdfde4c0fce8670541a59.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-iii-full-18990/934411')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/53/b9/53b94d6a8cfacafd5e3b48a071fffc00/53b94d6a8cfacafd5e3b48a071fffc00.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-iv-full-19157/1065247')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/48/f1/48f1bb4906d7a0ef6d58f266eff36f72/48f1bb4906d7a0ef6d58f266eff36f72.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-v-full-18572/1064426')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/01/b2/01b2ef8c3e2d921d617ad7a8235a3454/01b2ef8c3e2d921d617ad7a8235a3454.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rocky-balboa-full-18786/934529')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/46/4c/464cd93c7511a5dd2c9b666c212cc1b9/464cd93c7511a5dd2c9b666c212cc1b9.jpg" alt="">
+        </div>
+
+
+<!-- Movie posters will be added here Terminator series -->
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-terminator-full-19536/1064098')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/b1/3c/b13c2bd05c8cb147b767fd2376e64a5e/b13c2bd05c8cb147b767fd2376e64a5e.jpg" alt="">
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-terminator-2-judgment-day-full-19609/934034')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/f6/64/f6644b2f85e6714527b09f6dc1acad85/f6644b2f85e6714527b09f6dc1acad85.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-terminator-3-rise-of-the-machines-full-19041/1064298')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/ce/f0/cef0051aec8264248bc82af6d3f97dc6/cef0051aec8264248bc82af6d3f97dc6.jpg" alt="">
+          
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-terminator-salvation-full-18890/934470')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/d5/2a/d52ab50effebb4778c771fe54eae9693/d52ab50effebb4778c771fe54eae9693.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-terminator-genisys-full-19691/933993')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/5c/d8/5cd824b7397d5d0c74046bcd569896bb/5cd824b7397d5d0c74046bcd569896bb.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-terminator-dark-fate-full-9682/1124069')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/f0/ff/f0ff0ef9fac3361b088851093dd7f58a/f0ff0ef9fac3361b088851093dd7f58a.jpg" alt="">
+            
+        </div>
+
+<!-- Movie posters will be added here  God father series -->
+
+
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-godfather-full-19629/934019')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/1e/fe/1efe7a04df2a551d7a218247f0e4da89/1efe7a04df2a551d7a218247f0e4da89.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-godfather-part-ii-full-19317/934200')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/b1/61/b161d8a1aeb475472607520a74e97adb/b161d8a1aeb475472607520a74e97adb.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-godfather-part-iii-full-18352/1064456')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/7d/1e/7d1e320881aeae15a6bf4f3ccc9e0353/7d1e320881aeae15a6bf4f3ccc9e0353.jpg" alt="">
+            
+        </div>
+
+
+<!-- Movie posters will be added here classic single movies -->
+<!-- titanic -->
+
+
+
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-titanic-full-19586/934054')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/e1/8b/e18b9813113e8f26bc655864702a9085/e18b9813113e8f26bc655864702a9085.jpg" alt="">
+        </div>
+
+<!-- die hard series -->
+
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-die-hard-full-19728/1064045')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/63/8a/638a0e6e62305f66c22e28c155f0a22b/638a0e6e62305f66c22e28c155f0a22b.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-die-hard-2-full-19137/934299')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/56/1b/561bb98912feacbdf9e0edb92b730318/561bb98912feacbdf9e0edb92b730318.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-die-hard-with-a-vengeance-full-19165/1064279')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/db/ee/dbeefde4c8cbd1ba72d11ecf7c85d35d/dbeefde4c8cbd1ba72d11ecf7c85d35d.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-live-free-or-die-hard-full-18848/934485')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/05/85/058537d57d43318a6418191f8df77fdc/058537d57d43318a6418191f8df77fdc.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-a-good-day-to-die-hard-full-19261/934247')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/5c/ed/5ced2c55b30a9e7acbd262c09e0e3dd6/5ced2c55b30a9e7acbd262c09e0e3dd6.jpg" alt="">
+           
+        </div>
+
+<!-- kingdom of heavens-->
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-kingdom-of-heaven-full-18941/934445')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/be/1b/be1bccc0930b8f910b09436f1da792a5/be1bccc0930b8f910b09436f1da792a5.jpg" alt="">
+            
+        </div>
+<!-- all bat man movies-->
+
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-batman-begins-full-19636/1064170')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/15/33/1533eaa2c80dbc5ea003c7cc4f6669ff/1533eaa2c80dbc5ea003c7cc4f6669ff.jpg" alt="">
+            
+        </div>
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-dark-knight-full-19752/933956')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/db/3e/db3ee81a2f6cc2b52a80f8c1caea40a0/db3ee81a2f6cc2b52a80f8c1caea40a0.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-dark-knight-rises-full-19661/934002')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/bb/e9/bbe9e8d70a28832e5a6d8e4dab377025/bbe9e8d70a28832e5a6d8e4dab377025.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-batman-v-superman-dawn-of-justice-full-19747/933968')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/ec/fc/ecfc2373e3b3703a44f7cb4b7ee404c4/ecfc2373e3b3703a44f7cb4b7ee404c4.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-suicide-squad-full-19475/934113')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/7a/cf/7acf0b54bcac244a96fe9b169dd06d37/7acf0b54bcac244a96fe9b169dd06d37.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-justice-league-full-19763/933962')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/fc/3c/fc3c8d6998e065a2ebe1f319b80953f7/fc3c8d6998e065a2ebe1f319b80953f7.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-lego-batman-movie-full-19078/934353')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/81/b0/81b06893e5660184d80231222f3c910e/81b06893e5660184d80231222f3c910e.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-joker-full-9766/1122357')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/c4/73/c473cd6b420e855a1f00fe304f57d886/c473cd6b420e855a1f00fe304f57d886.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-batman-full-16076/1233688')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/21/2d/212d2d95b9d515504a4de227d49a769f/212d2d95b9d515504a4de227d49a769f.jpg" alt="">
+            
+        </div>
+
+<!-- all fantastic 4 movies-->
+
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-fantastic-four-full-19275/934235')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/34/83/348379eeb0fba8e7d1871dc0a3114449/348379eeb0fba8e7d1871dc0a3114449.jpg" alt="">
+            
+        </div>
+ 
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-fantastic-four-full-18667/934599')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/a1/07/a10709f80150282b1338fd6164b30500/a10709f80150282b1338fd6164b30500.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-fantastic-four-rise-of-the-silver-surfer-full-19399/1065222')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/30/3f/303f8100a8967e94b0f9c3aa283ee48e/303f8100a8967e94b0f9c3aa283ee48e.jpg" alt="">
+            
+        </div>
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-the-fantastic-four-full-10828/1068049')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/a3/a0/a3a0849b5cbf43fe92620ae2c49d3731/a3a0849b5cbf43fe92620ae2c49d3731.jpg" alt="">
+            
+        </div>
+
+
+    </div>
+
+</section>
+  <!-- Pagination numbers -->
+    <div class="pagination">
+        <a href="#">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <!-- Add more links for additional pages if needed -->
+    </div>
+
+<script>
+   
+    function goToMovie(movieURL) {
+        // Open the movie URL in a new tab
+        window.open(movieURL, '_blank');
+    }
+
+function filterMovies(keyword) {
+    var boxes = document.querySelectorAll('.box');
+    var searchTerm = keyword.toLowerCase();
+
+    boxes.forEach(function(box) {
+        var movieUrl = box.getAttribute('onclick').match(/'(.*?)'/)[1].toLowerCase(); // Extract URL from onclick attribute
+        if (movieUrl.includes(searchTerm)) {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    });
+}</script>
+
+</body>
+</html>
