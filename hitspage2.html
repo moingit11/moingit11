@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Set background color to black */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the container take up the full viewport height */
+        }
+
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            position: relative;
+            width: 150px;
+            height: 225px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Search box styles */
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .search-box {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+</style>
+  <style>
+        /* Your existing CSS styles here */
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #555;
+        }
+    </style>
+   </head>
+<body style="background-color: black;">
+
+<section class="movies" id="movies">
+  <h2 class="heading" style="text-align: center; text-decoration: underline; font-style: italic; color: red;">ALL HITS EVER</h2>
+<!-- Search box -->
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search movies..." onkeyup="filterMovies(this.value)">
+    </div>
+
+ <!-- planet of the apes series -->
+
+ <div class="movies-container">
+        <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-planet-of-the-apes-full-18054/1065385')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/de/86/de867a9cb4313c4ee3b38b0f632716cf/de867a9cb4313c4ee3b38b0f632716cf.jpg" alt="">
+        </div>
+
+        
+ <div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-beneath-the-planet-of-the-apes-full-12961/936527')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/c1/76/c176906fcbd8e84bfeca2e9ea49f0404/c176906fcbd8e84bfeca2e9ea49f0404.jpg" alt="">
+              </div>
+
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-escape-from-the-planet-of-the-apes-full-11518/936958')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/1d/4c/1d4c2c8d43ff956b76fbd87b1396b8f3/1d4c2c8d43ff956b76fbd87b1396b8f3.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-conquest-of-the-planet-of-the-apes-full-11493/936967')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/a7/57/a757662ddf583a883a4fe87a59bc5e50/a757662ddf583a883a4fe87a59bc5e50.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-battle-for-the-planet-of-the-apes-full-13227/936428')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/b3/a1/b3a12eace172e010c223dd7ca977e825/b3a12eace172e010c223dd7ca977e825.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-planet-of-the-apes-full-17825/1065434')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/57/22/5722e1ea178ddba6567d82b613ed25f3/5722e1ea178ddba6567d82b613ed25f3.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-rise-of-the-planet-of-the-apes-full-19216/934277')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/dd/d6/ddd665a9993a97ede2b18ce08275e312/ddd665a9993a97ede2b18ce08275e312.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-dawn-of-the-planet-of-the-apes-full-19276/934234')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/02/96/02968d9cfa75a279d98ae3ad796b043d/02968d9cfa75a279d98ae3ad796b043d.jpg" alt="">
+              </div>
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-war-for-the-planet-of-the-apes-full-19479/934109')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/43/e1/43e16f74e28ee64fba23e5c9ff7d22d7/43e16f74e28ee64fba23e5c9ff7d22d7.jpg" alt="">
+              </div>
+
+
+
+ <!-- new series marvel -->
+
+
+<div class="box" onclick="goToMovie('https://gostream.to/watch-movie/watch-captain-america-the-first-avenger-full-19108/934327')">
+            <img src="https://img.gostream.to/xxrz/250x400/601/c9/a6/c9a67da5635c5729d53b8668b23445ac/c9a67da5635c5729d53b8668b23445ac.jpg" alt="">
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+ <!-- Pagination numbers -->
+    <div class="pagination">
+        <a href="https://moingit11.github.io/moingit11/hitspage1.html">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="https://moingit11.github.io/moingit11/index.html">home</a>
+        <!-- Add more links for additional pages if needed -->
+    </div>
+<script>
+   
+    function goToMovie(movieURL) {
+        // Open the movie URL in a new tab
+        window.open(movieURL, '_blank');
+    }
+
+function filterMovies(keyword) {
+    var boxes = document.querySelectorAll('.box');
+    var searchTerm = keyword.toLowerCase();
+
+    boxes.forEach(function(box) {
+        var movieUrl = box.getAttribute('onclick').match(/'(.*?)'/)[1].toLowerCase(); // Extract URL from onclick attribute
+        if (movieUrl.includes(searchTerm)) {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    });
+}</script>
+
+</body>
+</html>
