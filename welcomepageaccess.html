@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MovieHub Homepage</title>
+
+
+  
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide scroll bars */
+            background-color: #000;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: transparent;
+            z-index: 100;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 0;
+            margin-top: 80px; /* Adjust for header height */
+        }
+
+        .video-background {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: red;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3333;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            background-color: #000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Toggle functionality */
+        @media screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #000;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .nav-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="C:\Users\moinr\Desktop\sc.png" alt="">
+        </div>
+        <div class="navbar-toggler" id="navbar-toggler"><i class="fas fa-bars"></i></div>
+       <div class="navbar-toggler" id="navbar-toggler"><i class="fas fa-bars"></i></div>
+<nav>
+    <ul class="navbar-nav" id="navbar-nav">
+       
+       <li class="nav-item"><a href="https://moingit11.github.io/moingit11/index.html" class="nav-link">Hollywood</a></li>
+<li class="nav-item"><a href="https://moingit11.github.io/moingit11/alterlang.html" class="nav-link">Bollywood</a></li>
+ <li class="nav-item"><a href="animatedhome.html" class="nav-link">Anime</a></li>
+
+
+
+    </ul>
+</nav>
+
+
+
+    </header>
+    <main>
+      
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome to  MovieHub
+</h1>
+       
+    </div>
+ <section class="video-background">
+    <video autoplay loop muted >
+        <source src="C:\Users\moinr\Desktop\t.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 MOVIE HUB</p>
+    </footer>
+
+    <script>
+        // Toggle functionality
+        const navbarToggler = document.getElementById('navbar-toggler');
+        const navbarNav = document.getElementById('navbar-nav');
+
+        navbarToggler.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+    </script>
+ <script>
+        // Function to display the pop-up message
+        function displaySuccessMessage() {
+            alert("Success! Welcome to Movie Hub.");
+        }
+
+        // Call the function when the page loads
+        window.onload = displaySuccessMessage;
+    </script>
+</body>
+</html>
