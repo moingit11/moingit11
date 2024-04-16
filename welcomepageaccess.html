@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title> MovieHub Homepage</title>
+    <title>MovieHub Homepage</title>
 
-
-  
     <style>
         /* Reset CSS */
         * {
@@ -162,10 +159,7 @@
             font-size: 18px;
         }
 
-        
-       <style>
-        
-
+        /* Toggle functionality */
         @media screen and (max-width: 768px) {
             .navbar-toggler {
                 display: block;
@@ -193,73 +187,62 @@
             }
         }
     </style>
-    </style>
 
 </head>
 <body>
 
+<header>
+    <div class="logo">
+        <img src="https://moingit11.github.io/moingit11/images/sc.png" alt="">
+    </div>
+    <br>
+    <div class="navbar-toggler" id="navbar-toggler"><i class="fas fa-bars"></i></div>
+    <nav>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li class="nav-item"><a href="https://moingit11.github.io/moingit11/hollywood.html" class="nav-link">Hollywood</a></li>
+            <li class="nav-item"><a href="https://moingit11.github.io/moingit11/bollywood.html" class="nav-link">Bollywood</a></li>
+            <li class="nav-item"><a href="animatedhome.html" class="nav-link">Anime</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <header>
-        <div class="logo">
-            <img src="https://moingit11.github.io/moingit11/images/sc.png" alt="">
-        </div>
-        <br>
-        <div class="navbar-toggler" id="navbar-toggler"><i class="fas fa-bars"></i></div>
-<nav>
-    <ul class="navbar-nav" id="navbar-nav">
-       
-       <li class="nav-item"><a href="https://moingit11.github.io/moingit11/hollywood.html" class="nav-link">Hollywood</a></li>
-<li class="nav-item"><a href="https://moingit11.github.io/moingit11/bollywood.html" class="nav-link">Bollywood</a></li>
- <li class="nav-item"><a href="animatedhome.html" class="nav-link">Anime</a></li>
-
-
-
-    </ul>
-</nav>
-
-
-
-    </header>
-    <main>
-      
+<main>
     <div class="overlay"></div>
     <div class="content">
-        <h1>Welcome to  MovieHub
-</h1>
-       
+        <h1>Welcome to MovieHub</h1>
     </div>
-       <script>
-    // Toggle functionality
-    document.addEventListener("DOMContentLoaded", function() {
-        const navbarToggler = document.getElementById('navbar-toggler');
-        const navbarNav = document.getElementById('navbar-nav');
+    <script>
+        // Toggle functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarToggler = document.getElementById('navbar-toggler');
+            const navbarNav = document.getElementById('navbar-nav');
 
-        navbarToggler.addEventListener('click', () => {
-            navbarNav.classList.toggle('active');
+            navbarToggler.addEventListener('click', () => {
+                navbarNav.classList.toggle('active');
+            });
         });
-    });
-</script>
- <section class="video-background">
-    <video autoplay loop muted >
-        <source src="https://moingit11.github.io/moingit11/trailer/t.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</section>
-
-    </main>
-    <footer>
-        <p>&copy; 2024 MOVIE HUB</p>
-    </footer>
-
-   
- <script>
-        // Function to display the pop-up message
-        function displaySuccessMessage() {
-            alert("Success! Welcome to Movie Hub.");
-        }
-
-        // Call the function when the page loads
-        window.onload = displaySuccessMessage;
     </script>
+    <section class="video-background">
+        <video autoplay loop muted >
+            <source src="https://moingit11.github.io/moingit11/trailer/t.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 MOVIE HUB</p>
+</footer>
+
+<script>
+    // Function to display the pop-up message
+    function displaySuccessMessage() {
+        alert("Success! Welcome to Movie Hub.");
+    }
+
+    // Call the function when the page loads
+    window.onload = displaySuccessMessage;
+</script>
+
 </body>
 </html>
