@@ -162,7 +162,10 @@
             font-size: 18px;
         }
 
-        /* Toggle functionality */
+        
+       <style>
+        
+
         @media screen and (max-width: 768px) {
             .navbar-toggler {
                 display: block;
@@ -180,13 +183,16 @@
                 box-sizing: border-box;
             }
 
+            .navbar-nav.active {
+                display: flex; /* Change to display flex when active */
+            }
+
             .nav-item {
                 margin-right: 0;
                 margin-bottom: 10px;
             }
         }
-
-
+    </style>
     </style>
 
 </head>
