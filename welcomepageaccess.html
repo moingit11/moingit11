@@ -221,15 +221,17 @@
 </h1>
        
     </div>
-         <script>
-        // Toggle functionality
+       <script>
+    // Toggle functionality
+    document.addEventListener("DOMContentLoaded", function() {
         const navbarToggler = document.getElementById('navbar-toggler');
         const navbarNav = document.getElementById('navbar-nav');
 
         navbarToggler.addEventListener('click', () => {
             navbarNav.classList.toggle('active');
         });
-    </script>
+    });
+</script>
  <section class="video-background">
     <video autoplay loop muted >
         <source src="https://moingit11.github.io/moingit11/trailer/t.mp4" type="video/mp4">
