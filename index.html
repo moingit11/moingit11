@@ -235,7 +235,7 @@
         <p>Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
        <form id="loginForm">
     <!-- Add autocomplete attribute to enable password saving -->
-    
+     <input type="password" id="password" name="password" autocomplete="current-password" required>
     <button type="button" onclick="checkPassword()" class="button">Log In</button>
 </form>
     </div>
@@ -262,13 +262,11 @@
     </script>
  <script>
         function checkPassword() {
-            // Prompt the user to enter the password
-            var password = prompt("Please enter the password:");
-
+          
             // Check if the password is correct
             if (password === "123456789") { // Replace "your_password_here" with the actual password
                 // Redirect to the desired page
-                window.location.href = "https://moingit11.github.io/moingit11/welcomepageaccess.html"; // Replace with your desired URL
+              window.location.href = "https://moingit11.github.io/moingit11/welcomepageaccess.html"; // Replace with your desired URL
             } else {
                 alert("Incorrect password. Please try again.");
             }
