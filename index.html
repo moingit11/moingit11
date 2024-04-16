@@ -233,7 +233,11 @@
         <h1>Welcome to  MovieHub
 </h1>
         <p>Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
-        <a href="#" id="loginButton" onclick="checkPassword()" class="button">Log In</a>
+       <form id="loginForm">
+    <!-- Add autocomplete attribute to enable password saving -->
+    <input type="password" id="password" name="password" autocomplete="current-password" required>
+    <button type="button" onclick="checkPassword()" class="button">Log In</button>
+</form>
     </div>
  <section class="video-background">
     <video autoplay loop muted >
