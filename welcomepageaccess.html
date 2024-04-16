@@ -244,6 +244,15 @@
 </h1>
        
     </div>
+         <script>
+        // Toggle functionality
+        const navbarToggler = document.getElementById('navbar-toggler');
+        const navbarNav = document.getElementById('navbar-nav');
+
+        navbarToggler.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+    </script>
  <section class="video-background">
     <video autoplay loop muted >
         <source src="https://moingit11.github.io/moingit11/trailer/t.mp4" type="video/mp4">
@@ -256,15 +265,7 @@
         <p>&copy; 2024 MOVIE HUB</p>
     </footer>
 
-    <script>
-        // Toggle functionality
-        const navbarToggler = document.getElementById('navbar-toggler');
-        const navbarNav = document.getElementById('navbar-nav');
-
-        navbarToggler.addEventListener('click', () => {
-            navbarNav.classList.toggle('active');
-        });
-    </script>
+   
  <script>
         // Function to display the pop-up message
         function displaySuccessMessage() {
